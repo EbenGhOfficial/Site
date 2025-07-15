@@ -14,8 +14,8 @@ header{
          
 }
 .Logo{
-    width:80px;
-    height:80px;   
+    width:50px;
+    height:50px;   
     top:0;
     left:0;   
     border-radius: 50%;    
@@ -66,7 +66,7 @@ body{
                 Border:10px double #4ecdc4 ;
                 width:50%;
                 border-radius:20;
-                margin-left:350px; 
+                margin-left:100px; 
                 margin-top:20px;
             }
             main{
