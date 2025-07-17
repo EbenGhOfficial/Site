@@ -1,0 +1,80 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{  
+    background:#0d1b2a;
+    color:beige;   
+    padding: 8px 1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+         
+}
+.Logo{
+    width:50px;
+    height:50px;   
+    top:0;
+    left:0;   
+    border-radius: 50%;    
+    overflow:hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* For positioning the border */
+    border: 5px double #4ecdc4;
+}
+div.Bouncing-Name{
+word-spacing: 30px;
+
+}
+
+.Bouncing-Name span{
+    display:inline-block;
+    color:#4ecdc4;
+    font-size:30px;
+    font-weight:bold;
+    animation:bounce 0.8s ease infinite alternate;
+   
+    }
+       
+  
+body{
+    background-color:#1b263b;
+   
+}
+
+ .nav-links a:hover{
+    color:#4ecdc4;
+        background:blue;
+        }
+        .nav-links a{
+            color:var(--text-secondary);
+            text-decoration:none;
+            font-weight:500;
+            transition:0.3s;
+            padding:0.5rem 1rem;
+            border-radius:8px;            
+            }
+            p{
+                color:powderblue;
+                font-size:30px;
+                padding:30px 20px 20px 50px;
+                Border:10px double #4ecdc4 ;
+                width:50%;
+                border-radius:20;
+                margin-left:100px; 
+                margin-top:20px;
+            }
+            main{
+                color:powderblue;
+                padding:20px;
+                text-indent: 50px;
+               
+            }
+            footer{
+                color:powderblue;
+            }
