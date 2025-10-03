@@ -1,16 +1,424 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EbenGh Technologies</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EbenGh Technologies | Innovative IT Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>EbenGh Technologies</h1>
-    <p>Technology Giants</p>
-      <p>COMING SOON !!! </p>
-  </div>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">EbenGh<span>Technologies</span></div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#event">Community Event</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="#" class="git"><i class="fab fa-github"></i></a>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <!-- <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Innovative Technology Solutions for Your Business</h1>
+                    <p>We provide cutting-edge software development, cloud solutions, and digital transformation services to help your business thrive in the digital age.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn">Get Started</a>
+                        <a href="#services" class="btn btn-outline">Our Services</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Technology Illustration">
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-slider">
+                <div class="hero-slide active" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80')">
+                    <div class="slide-content">
+                        <h1>Innovative Technology Solutions for Your Business</h1>
+                        <p>We provide cutting-edge software development, cloud solutions, and digital transformation services to help your business thrive in the digital age.</p>
+                        <div class="hero-buttons">
+                            <a href="#contact" class="btn">Get Started</a>
+                            <a href="#services" class="btn btn-outline">Our Services</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-slide" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80')">
+                    <div class="slide-content">
+                        <h1>Empowering Businesses Through Technology</h1>
+                        <p>From startups to enterprises, we deliver tailored solutions that drive growth and innovation.</p>
+                        <div class="hero-buttons">
+                            <a href="#about" class="btn">Learn More</a>
+                            <a href="#contact" class="btn btn-outline">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-slide" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80')">
+                    <div class="slide-content">
+                        <h1>Bridging the Digital Divide</h1>
+                        <p>Committed to community development through technology education and training.</p>
+                        <div class="hero-buttons">
+                            <a href="#event" class="btn">Our Initiatives</a>
+                            <a href="#contact" class="btn btn-outline">Get Involved</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-nav">
+                    <div class="hero-dot active"></div>
+                    <div class="hero-dot"></div>
+                    <div class="hero-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>We offer a wide range of technology services to meet your business needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Custom web applications built with the latest technologies to drive your business forward.</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Apps</h3>
+                    <p>Native and cross-platform mobile applications for iOS and Android devices.</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud Solutions</h3>
+                    <p>Scalable cloud infrastructure and services to support your business growth.</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Data Analytics</h3>
+                    <p>Turn your data into actionable insights with our advanced analytics solutions.</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Cyber Security</h3>
+                    <p>Protect your business from threats with our comprehensive security solutions.</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI & Machine Learning</h3>
+                    <p>Leverage the power of AI and machine learning to automate and optimize processes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text animate-on-scroll">
+                    <h2>About EbenGh Technologies</h2>
+                    <p>EbenGh Technologies is a leading technology company dedicated to providing innovative solutions that help businesses transform and thrive in the digital era.</p>
+                    <p>Founded in 2015, we have grown to become a trusted partner for businesses of all sizes, from startups to Fortune 500 companies.</p>
+                    <p>Our team of experienced developers, designers, and technology experts are passionate about delivering solutions that drive real business value.</p>
+                    <a href="#contact" class="btn">Get in Touch</a>
+                </div>
+                <div class="about-image animate-on-scroll">
+                    <!-- <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Our Team"> -->
+                    <img src="https://media.licdn.com/dms/image/v2/D4E22AQE4gGpLcN5c8w/feedshare-shrink_800/B4EZgw1ZJEGwAg-/0/1753165961912?e=2147483647&v=beta&t=xcXH5IEetSg7Z8zUsr1MPH_liXtFvMqcjKr3avZLfSc" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Event Section -->
+    <section class="event" id="event">
+        <div class="container">
+            <div class="event-content">
+                <div class="event-image animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="IT Training Event">
+                </div>
+                <div class="event-text animate-on-scroll">
+                    <h2>Community IT Training Initiative</h2>
+                    <p>On July 11th, 2025, EbenGh Technologies organized a free IT training for over 180 pupils at Pantang Basic School. The hands-on training covered essential topics like Introduction to Computers, Social Media, and Graphic Design.</p>
+                    <p>With 10 laptops provided for practical sessions, pupils gained valuable tech skills in a fun and interactive environment. This initiative by EbenGh Technologies bridged the digital gap for young learners, sparking interest in technology and creativity.</p>
+                    <p>The training was a huge success, empowering the next generation with vital digital skills for the future.</p>
+                    <div class="event-details">
+                        <div class="event-detail">
+                            <i class="fas fa-users"></i>
+                            <h4>180+ Students</h4>
+                        </div>
+                        <div class="event-detail">
+                            <i class="fas fa-laptop"></i>
+                            <h4>10 Laptops</h4>
+                        </div>
+                        <div class="event-detail">
+                            <i class="fas fa-calendar"></i>
+                            <h4>July 11, 2025</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Clients Say</h2>
+                <p>Hear from some of our satisfied clients</p>
+            </div>
+            <div class="testimonials-container">
+                <div class="testimonials-slider" id="testimonialsSlider">
+                    <div class="testimonial-card animate-on-scroll">
+                        <div class="testimonial-text">
+                            <p>"EbenGh Technologies transformed our e-commerce platform, resulting in a 40% increase in sales within the first quarter. Their team was professional and delivered on time."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah Johnson">
+                            </div>
+                            <div class="author-details">
+                                <h4>Sarah Johnson</h4>
+                                <p>CEO, Fashion Retail</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card animate-on-scroll">
+                        <div class="testimonial-text">
+                            <p>"The mobile app developed by EbenGh Technologies has exceeded our expectations. It's user-friendly, fast, and has significantly improved our customer engagement."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen">
+                            </div>
+                            <div class="author-details">
+                                <h4>Michael Chen</h4>
+                                <p>CTO, HealthTech Inc.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card animate-on-scroll">
+                        <div class="testimonial-text">
+                            <p>"We partnered with EbenGh Technologies for our cloud migration project, and the results have been outstanding. Our systems are now more scalable and cost-effective."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Jessica Williams">
+                            </div>
+                            <div class="author-details">
+                                <h4>Jessica Williams</h4>
+                                <p>IT Director, FinanceCorp</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-nav" id="testimonialNav">
+                    <div class="testimonial-dot active"></div>
+                    <div class="testimonial-dot"></div>
+                    <div class="testimonial-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch with us to discuss your project</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info animate-on-scroll">
+                    <h2>Let's Talk About Your Project</h2>
+                    <p>We're here to answer any questions you may have and discuss how we can help your business grow with our technology solutions.</p>
+                    <div class="contact-details">
+                        <div class="contact-detail" onclick="initiateCall()">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>0278633288</p>
+                                <small>Click to call</small>
+                            </div>
+                        </div>
+                        <div class="contact-detail" onclick="openEmailClient()">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>EbenGh-Technologies@gmail.com</p>
+                                <small>Click to email</small>
+                            </div>
+                        </div>
+                        <div class="contact-detail" onclick="openWhatsApp()">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <p>0278633288</p>
+                                <small>Click to chat</small>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Address</h4>
+                                <p>123 Tech Street, San Francisco, CA 94103</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form animate-on-scroll">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        
+                        <div class="communication-options">
+                            <div class="comm-option" data-method="email" onclick="selectCommMethod(this)">
+                                <i class="fas fa-envelope"></i>
+                                <p>Email</p>
+                            </div>
+                            <div class="comm-option" data-method="whatsapp" onclick="selectCommMethod(this)">
+                                <i class="fab fa-whatsapp"></i>
+                                <p>WhatsApp</p>
+                            </div>
+                            <div class="comm-option" data-method="phone" onclick="selectCommMethod(this)">
+                                <i class="fas fa-phone"></i>
+                                <p>Phone Call</p>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <div class="form-message" id="formMessage"></div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>EbenGh Technologies</h3>
+                    <p>Innovative technology solutions for businesses of all sizes. Let us help you transform your ideas into reality.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#event">Community Event</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Mobile Apps</a></li>
+                        <li><a href="#">Cloud Solutions</a></li>
+                        <li><a href="#">Data Analytics</a></li>
+                        <li><a href="#">Cyber Security</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter to get updates on our latest services and offers.</p>
+                    <div class="footer-newsletter">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                    <div class="footer-newsletter">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                    <div class="footer-newsletter">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 EbenGh Technologies. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="script.js"></script>
 </body>
 </html>
