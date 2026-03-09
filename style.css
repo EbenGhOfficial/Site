@@ -420,6 +420,7 @@ nav {
 
 .hero-layer-1 {
     z-index: 3;
+    /* GSAP will toggle pointer-events via inline style when fading */
 }
 
 .hero-layer-2 {
@@ -579,6 +580,7 @@ nav {
     display: flex;
     gap: 1.6rem;
     flex-wrap: wrap;
+    padding-bottom: 2rem;
 }
 
 .btn-xl {
@@ -2386,6 +2388,41 @@ footer {
         padding: 7rem 0 3rem;
     }
 
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .hero-image-wrapper {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .hero-cta-group {
+        justify-content: center;
+    }
+
+    .layer-1-text {
+        padding-top: 40px;
+    }
+
+    .layer-2-content {
+        padding-top: 40px;
+    }
+
+    .layer-2-title {
+        font-size: clamp(2.5rem, 8vw, 4rem);
+    }
+
+    .layer-2-subtitle {
+        font-size: clamp(1rem, 3vw, 1.3rem);
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+
     .hero-text h1 {
         font-size: 2.2rem;
     }
@@ -2463,6 +2500,24 @@ footer {
 
     .services-grid {
         grid-template-columns: 1fr;
+    }
+
+    .hero-title {
+        font-size: clamp(2rem, 7vw, 3rem);
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .btn-xl {
+        padding: 0.9rem 1.8rem;
+        font-size: 1rem;
+    }
+
+    .hero-cta-group {
+        flex-direction: column;
+        align-items: center;
     }
 }
 

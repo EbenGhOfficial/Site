@@ -466,9 +466,9 @@ if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
     // Pause briefly
     heroTl.to({}, { duration: 0.5 });
 
-    // Phase 2: Fade out Layer 1 with a subtle upward movement
+    // Phase 2: Fade out Layer 1 with a subtle upward movement + disable pointer events
     heroTl.to(".hero-layer-1",
-        { opacity: 0, y: -20, duration: 1.4, ease: "power1.inOut" }
+        { opacity: 0, y: -20, pointerEvents: "none", duration: 1.4, ease: "power1.inOut" }
     );
 
     // Phase 3: Fade in Layer 2 (video auto-plays) + text (Mobile parallax styling built-in)
