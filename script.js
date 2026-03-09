@@ -12,6 +12,16 @@ const themeIcon = themeToggle ? themeToggle.querySelector('i') : null;
 const backToTopBtn = document.getElementById('backToTop');
 
 // --- Mobile Menu Toggle ---
+function closeMobileMenu() {
+    navLinks.classList.remove('active');
+    if (navOverlay) navOverlay.classList.remove('active');
+    const icon = menuToggle ? menuToggle.querySelector('i') : null;
+    if (icon) {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+    }
+}
+
 if (menuToggle) {
     menuToggle.addEventListener('click', () => {
         navLinks.classList.toggle('active');
@@ -28,14 +38,55 @@ if (menuToggle) {
 }
 
 if (navOverlay) {
-    navOverlay.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        navOverlay.classList.remove('active');
-        const icon = menuToggle.querySelector('i');
-        icon.classList.remove('fa-times');
-        icon.classList.add('fa-bars');
-    });
+    navOverlay.addEventListener('click', closeMobileMenu);
 }
+
+// --- Dynamic Sidebar Enhancements (icons + close button + branding) ---
+(function enhanceSidebar() {
+    if (!navLinks) return;
+
+    // Nav link icons mapping
+    const iconMap = {
+        'Home': 'fa-house',
+        'About': 'fa-circle-info',
+        'Services': 'fa-laptop-code',
+        'Programs': 'fa-graduation-cap',
+        'Donate': 'fa-hand-holding-heart',
+        'Contact': 'fa-envelope'
+    };
+
+    // Add icons to nav links
+    navLinks.querySelectorAll('a').forEach(link => {
+        const text = link.textContent.trim();
+        const iconClass = iconMap[text];
+        if (iconClass && !link.querySelector('i')) {
+            const icon = document.createElement('i');
+            icon.className = `fas ${iconClass} sidebar-nav-icon`;
+            link.prepend(icon);
+        }
+    });
+
+    // Add close button
+    const closeBtn = document.createElement('button');
+    closeBtn.className = 'sidebar-close-btn';
+    closeBtn.innerHTML = '<i class="fas fa-xmark"></i>';
+    closeBtn.setAttribute('aria-label', 'Close menu');
+    closeBtn.addEventListener('click', closeMobileMenu);
+    navLinks.prepend(closeBtn);
+
+    // Add branded header
+    const brandDiv = document.createElement('div');
+    brandDiv.className = 'sidebar-brand';
+    brandDiv.innerHTML = `
+        <img src="Images/logo.jpeg" alt="EbenGh Logo" class="sidebar-logo">
+        <div class="sidebar-brand-text">
+            <span class="sidebar-brand-name">Eben<span style="color: var(--accent);">Gh</span></span>
+            <span class="sidebar-brand-tagline">Technologies</span>
+        </div>
+    `;
+    // Insert after close button (which is now the first child)
+    closeBtn.after(brandDiv);
+})();
 
 // Close mobile menu on link click
 document.querySelectorAll('.nav-links a').forEach(link => {
