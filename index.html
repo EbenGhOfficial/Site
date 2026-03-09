@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EbenGh Technologies | Empowering Communities Through Technology</title>
+    <meta name="description"
+        content="EbenGh Technologies provides free community IT training to bridge the digital divide. Join us in empowering our community through technology.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <div class="logo-icon"><img src="Images/logo.jpeg" alt="EbenGh Logo"></div>
+                    <span class="logo-text">Eben<span class="logo-accent">Gh</span></span>
+                </a>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <a href="donate.html" class="btn btn-primary nav-cta">
+                        <i class="fas fa-hand-holding-dollar"></i> Donate
+                    </a>
+                    <div class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile nav overlay -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- =============== HERO SECTION =============== -->
+    <section class="hero" id="home">
+
+        <!-- Layer 1: Community / Human start (static image) -->
+        <div class="hero-layer hero-layer-1">
+            <div class="hero-bg-gradient layer-1-bg"></div>
+
+            <div class="hero-content container">
+                <div class="hero-grid">
+                    <!-- Left: Image -->
+                    <div class="hero-image-wrapper">
+                        <img src="Images/Profile1.JPG" alt="Ghanaian community member learning tech skills"
+                            class="hero-main-img layer-1-img">
+                        <div class="hero-image-accent"></div>
+                    </div>
+
+                    <!-- Right: Text + CTA -->
+                    <div class="hero-text-block layer-1-text">
+                        <h1 class="hero-title">
+                            Empowering Communities<br> Through <span class="gradient-text">Technology</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            Free IT training • Closing the digital divide • Skills for youth and underserved communities
+                            in Ghana
+                        </p>
+                        <div class="hero-cta-group">
+                            <a href="programs.html" class="btn btn-primary btn-xl">
+                                <i class="fas fa-rocket"></i> Discover Programs
+                            </a>
+                            <a href="donate.html" class="btn btn-outline btn-xl">
+                                <i class="fas fa-hand-holding-dollar"></i> Support Us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Layer 2: Video + Futuristic / Impact message -->
+        <div class="hero-layer hero-layer-2">
+            <!-- Video background (looping YouTube iframe) -->
+            <div class="hero-video-bg">
+                <iframe width="560" height="315"
+                    src="https://www.youtube-nocookie.com/embed/cCNnWPvb9KQ?autoplay=1&mute=1&controls=0&loop=1&playlist=cCNnWPvb9KQ&playsinline=1&rel=0&origin=http://localhost"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <div class="hero-video-overlay"></div>
+            <!-- subtle tint for readability -->
+
+            <div class="hero-content container layer-2-content">
+                <div class="hero-text-block layer-2-text">
+                    <h1 class="hero-title layer-2-title">
+                        The Future Starts Here<br>
+                        <span class="gradient-text">Digital Skills for All</span>
+                    </h1>
+                    <p class="hero-subtitle layer-2-subtitle">
+                        From classrooms in Accra to villages across Ghana — we're training the next generation of
+                        innovators. Join the movement today.
+                    </p>
+                    <div class="hero-cta-group layer-2-cta" style="justify-content: center;">
+                        <a href="donate.html" class="btn btn-accent btn-xl">
+                            <i class="fas fa-heart"></i> Donate Now – Change Lives
+                        </a>
+                        <a href="contact.html" class="btn btn-outline btn-xl">
+                            <i class="fas fa-handshake"></i> Become a Partner
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll hint -->
+        <div class="scroll-hint">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll to see the impact</span>
+        </div>
+    </section>
+
+    <!-- =============== VISION & MISSION SECTION =============== -->
+    <section class="vision-mission" id="vision">
+        <div class="container">
+            <div class="section-title">
+                <div class="section-badge"><i class="fas fa-bolt"></i> Who We Are</div>
+                <h2>Our Vision & Mission</h2>
+                <div class="underline"></div>
+                <p>Driven by a commitment to bridging the digital divide</p>
+            </div>
+            <div class="vm-grid">
+                <div class="vm-card vision animate-on-scroll">
+                    <div class="vm-icon blue"><i class="fas fa-eye"></i></div>
+                    <h3>Our Vision</h3>
+                    <p>In today's digital age, access to information technology (IT) skills is crucial for personal and
+                        professional growth. However, many individuals in our community face barriers to acquiring these
+                        skills due to financial constraints.
+                        To address this issue, we propose a Free Community IT Training program, designed to provide
+                        underserved populations with the IT skills they need to thrive.
+                    </p>
+                </div>
+                <div class="vm-card mission animate-on-scroll">
+                    <div class="vm-icon green"><i class="fas fa-bullseye"></i></div>
+                    <h3>Our Mission</h3>
+                    <p>Our mission is to bridge the digital divide by offering free IT training to individuals who lack
+                        access to these resources. We believe that everyone deserves the opportunity to develop the
+                        skills necessary to participate fully in the
+                        digital economy. Our program will provide training in essential IT skills, including computer
+                        basics, software applications, and online safety.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============== SERVICES SECTION =============== -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <div class="section-badge"><i class="fas fa-bolt"></i> What We Offer</div>
+                <h2>Our Services</h2>
+                <div class="underline"></div>
+                <p>We offer a wide range of technology services to meet your needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon"><i class="fas fa-code"></i></div>
+                    <h3>Web Development</h3>
+                    <p>Custom web applications built with the latest technologies to drive your business forward.</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Mobile Apps</h3>
+                    <p>Native and cross-platform mobile applications for iOS and Android devices.</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon"><i class="fas fa-cloud"></i></div>
+                    <h3>Cloud Solutions</h3>
+                    <p>Scalable cloud infrastructure and services to support your business growth.</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Data Analytics</h3>
+                    <p>Turn your data into actionable insights with our advanced analytics solutions.</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Cyber Security</h3>
+                    <p>Protect your business from threats with our comprehensive security solutions.</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon"><i class="fas fa-robot"></i></div>
+                    <h3>AI & Machine Learning</h3>
+                    <p>Leverage the power of AI and machine learning to automate and optimize processes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============== IMPACT / STATS SECTION =============== -->
+    <section class="impact" id="impact">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card animate-on-scroll">
+                    <div class="stat-icon"><i class="fas fa-user-graduate"></i></div>
+                    <h3><span class="counter" data-target="180">0</span>+</h3>
+                    <p>Students Trained</p>
+                </div>
+                <div class="stat-card animate-on-scroll">
+                    <div class="stat-icon"><i class="fas fa-laptop"></i></div>
+                    <h3><span class="counter" data-target="10">0</span>+</h3>
+                    <p>Laptops Provided</p>
+                </div>
+                <div class="stat-card animate-on-scroll">
+                    <div class="stat-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <h3><span class="counter" data-target="5">0</span>+</h3>
+                    <p>Training Modules</p>
+                </div>
+                <div class="stat-card animate-on-scroll">
+                    <div class="stat-icon"><i class="fas fa-handshake"></i></div>
+                    <h3><span class="counter" data-target="100">0</span>%</h3>
+                    <p>Free of Charge</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============== ABOUT SECTION =============== -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text animate-on-scroll">
+                    <div class="section-badge"><i class="fas fa-bolt"></i> About Us</div>
+                    <h2>About EbenGh Technologies</h2>
+                    <p>EbenGh Technologies is a leading technology company dedicated to providing innovative solutions
+                        that help businesses transform and thrive in the digital era.</p>
+                    <p>We are also deeply committed to our community, running free IT training programs to ensure that
+                        everyone, regardless of financial background, has access to crucial digital skills.</p>
+                    <div class="about-features">
+                        <div class="about-feature"><i class="fas fa-check-circle"></i><span>Free IT Training</span>
+                        </div>
+                        <div class="about-feature"><i class="fas fa-check-circle"></i><span>Community Focused</span>
+                        </div>
+                        <div class="about-feature"><i class="fas fa-check-circle"></i><span>Expert Instructors</span>
+                        </div>
+                        <div class="about-feature"><i class="fas fa-check-circle"></i><span>Hands-on Learning</span>
+                        </div>
+                    </div>
+                    <a href="about.html" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Learn More</a>
+                </div>
+                <div class="about-image animate-on-scroll">
+                    <img src="Images/about us.jpeg" alt="EbenGh Technologies community training event">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============== COMMUNITY EVENT SECTION =============== -->
+    <section class="event" id="event">
+        <div class="container">
+            <div class="event-content">
+                <div class="event-image animate-on-scroll">
+                    <div class="video-wrapper">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/cCNnWPvb9KQ?si=Sgeat6KzZdmh9Fhm&origin=http://localhost"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="event-text animate-on-scroll">
+                    <div class="section-badge" style="background: rgba(255,255,255,0.15); color: white;">
+                        <i class="fas fa-bolt"></i> Community Initiative
+                    </div>
+                    <h2>Community IT Training Initiative</h2>
+                    <p>On July 11th, 2025, EbenGh Technologies organized a free IT training for over 180 pupils at
+                        Pantang Basic School. The hands-on training covered essential topics like Introduction to
+                        Computers, Social Media, and Graphic Design.</p>
+                    <p>With 10 laptops provided for practical sessions, pupils gained valuable tech skills in a fun and
+                        interactive environment.</p>
+                    <div class="event-details">
+                        <div class="event-detail"><i class="fas fa-users"></i>
+                            <h4>180+ Students</h4>
+                        </div>
+                        <div class="event-detail"><i class="fas fa-laptop"></i>
+                            <h4>10 Laptops</h4>
+                        </div>
+                        <div class="event-detail"><i class="fas fa-calendar"></i>
+                            <h4>July 11, 2025</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============== TESTIMONIALS SECTION =============== -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <div class="section-badge"><i class="fas fa-bolt"></i> Testimonials</div>
+                <h2>What People Say</h2>
+                <div class="underline"></div>
+                <p>Hear from our clients and community members</p>
+            </div>
+            <div class="testimonials-container">
+                <div class="testimonials-slider" id="testimonialsSlider">
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            <p>EbenGh Technologies transformed our e-commerce platform, resulting in a 40% increase in
+                                sales within the first quarter. Their team was professional and delivered on time.</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image"><img src="https://randomuser.me/api/portraits/women/45.jpg"
+                                    alt="Sarah Johnson"></div>
+                            <div class="author-details">
+                                <h4>Sarah Johnson</h4>
+                                <p>CEO, Fashion Retail</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            <p>The mobile app developed by EbenGh Technologies has exceeded our expectations. It's
+                                user-friendly, fast, and has significantly improved our customer engagement.</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image"><img src="https://randomuser.me/api/portraits/men/32.jpg"
+                                    alt="Michael Chen"></div>
+                            <div class="author-details">
+                                <h4>Michael Chen</h4>
+                                <p>CTO, HealthTech Inc.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            <p>We partnered with EbenGh Technologies for our cloud migration project, and the results
+                                have been outstanding. Our systems are now more scalable and cost-effective.</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image"><img src="https://randomuser.me/api/portraits/women/68.jpg"
+                                    alt="Jessica Williams"></div>
+                            <div class="author-details">
+                                <h4>Jessica Williams</h4>
+                                <p>IT Director, FinanceCorp</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-nav" id="testimonialNav">
+                    <div class="testimonial-dot active"></div>
+                    <div class="testimonial-dot"></div>
+                    <div class="testimonial-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============== DONATION SECTION =============== -->
+    <section class="donate" id="donate">
+        <div class="container">
+            <div class="section-title">
+                <div class="section-badge"><i class="fas fa-bolt"></i> Support Us</div>
+                <h2>Make a Donation</h2>
+                <div class="underline"></div>
+                <p>Your contribution directly supports the delivery of our IT training program</p>
+            </div>
+            <div class="donate-content">
+                <div class="donate-info animate-on-scroll">
+                    <h2>How Your Support Makes a Difference</h2>
+                    <p>Your contribution will directly support the delivery of our IT training program, enabling us to
+                        reach more individuals and make a meaningful impact in our community.</p>
+                    <div class="donate-methods">
+                        <div class="donate-method">
+                            <div class="donate-method-icon bank"><i class="fas fa-university"></i></div>
+                            <div class="donate-method-details">
+                                <h4>Bank Transfer</h4>
+                                <p>EbenGh Technologies — Access Bank</p>
+                                <span class="account-number">1010000007959</span>
+                            </div>
+                        </div>
+                        <div class="donate-method">
+                            <div class="donate-method-icon mobile"><i class="fas fa-mobile-alt"></i></div>
+                            <div class="donate-method-details">
+                                <h4>Mobile Money</h4>
+                                <p>EbenGh Technologies</p>
+                                <span class="account-number">0538811325</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="donate-cta animate-on-scroll">
+                    <div class="heart-icon"><i class="fas fa-heart"></i></div>
+                    <h3>Join Us in Empowering Our Community</h3>
+                    <p>We invite you to join us in empowering our community through technology. Your support will help
+                        us create a more digitally inclusive society.</p>
+                    <p><strong>Every contribution, big or small, will bring us closer to achieving our goal.</strong>
+                    </p>
+                    <a href="donate.html" class="btn btn-accent btn-lg"><i class="fas fa-hand-holding-dollar"></i>
+                        Donate Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============== CONTACT SECTION =============== -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <div class="section-badge"><i class="fas fa-bolt"></i> Get In Touch</div>
+                <h2>Contact Us</h2>
+                <div class="underline"></div>
+                <p>Get in touch with us to discuss your project or support our mission</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info animate-on-scroll">
+                    <h2>Let's Talk</h2>
+                    <p>We're here to answer any questions you may have about our services or community programs.</p>
+                    <div class="contact-details">
+                        <div class="contact-detail" onclick="initiateCall()">
+                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>0278633288</p><small>Click to call</small>
+                            </div>
+                        </div>
+                        <div class="contact-detail" onclick="openEmailClient()">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>Ebenghtechnologies@gmail.com</p><small>Click to email</small>
+                            </div>
+                        </div>
+                        <div class="contact-detail" onclick="openWhatsApp()">
+                            <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <p>0278633288</p><small>Click to chat</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form animate-on-scroll">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" placeholder="What is this about?" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" placeholder="Write your message here..." required></textarea>
+                        </div>
+                        <div class="communication-options">
+                            <div class="comm-option selected" data-method="email" onclick="selectCommMethod(this)">
+                                <i class="fas fa-envelope"></i>
+                                <p>Email</p>
+                            </div>
+                            <div class="comm-option" data-method="whatsapp" onclick="selectCommMethod(this)">
+                                <i class="fab fa-whatsapp"></i>
+                                <p>WhatsApp</p>
+                            </div>
+                            <div class="comm-option" data-method="phone" onclick="selectCommMethod(this)">
+                                <i class="fas fa-phone"></i>
+                                <p>Phone Call</p>
+                            </div>
+                        </div>
+                        <div class="form-message" id="formMessage"></div>
+                        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============== FOOTER =============== -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>EbenGh Technologies</h3>
+                    <p>Empowering our community through technology. Providing innovative solutions and free IT training
+                        to build a more digitally inclusive society.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Web Development</a></li>
+                        <li><a href="services.html">Mobile Apps</a></li>
+                        <li><a href="services.html">Cloud Solutions</a></li>
+                        <li><a href="services.html">Data Analytics</a></li>
+                        <li><a href="services.html">Cyber Security</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get updates on our latest programs and services.</p>
+                    <form class="footer-newsletter" id="newsletterForm">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 EbenGh Technologies. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Modal -->
+    <div class="modal" id="commModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Request a Call</h3>
+                <span class="close-modal" onclick="closeModal()">&times;</span>
+            </div>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
