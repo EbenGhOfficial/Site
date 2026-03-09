@@ -430,11 +430,12 @@ if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);
 
     // Hero Scroll Animation Dual Layer
+    const isMobile = window.innerWidth <= 768;
     const heroTl = gsap.timeline({
         scrollTrigger: {
             trigger: ".hero",
             start: "top top",
-            end: "+=240%",
+            end: isMobile ? "+=120%" : "+=240%",
             scrub: 0.65,
             pin: true,
             pinSpacing: true,
