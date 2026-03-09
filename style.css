@@ -461,13 +461,17 @@ nav {
     z-index: 2;
 }
 
-/* Make Layer 1 Light */
 .layer-1-bg {
     background: linear-gradient(135deg, #f8fafc, #f1f5f9, #e2e8f0);
     opacity: 0.98;
     position: absolute;
     inset: 0;
     z-index: 1;
+    transition: background 0.4s ease;
+}
+
+[data-theme="dark"] .layer-1-bg {
+    background: linear-gradient(135deg, #0f172a, #1e293b, #111827);
 }
 
 .layer-1-text .hero-title,
@@ -581,6 +585,8 @@ nav {
     gap: 1.6rem;
     flex-wrap: wrap;
     padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    /* Added margin for lower buttons (Donate Now / Become a Partner) */
 }
 
 .btn-xl {
